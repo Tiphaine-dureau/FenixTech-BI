@@ -11,13 +11,12 @@ d’un outil de Business Intelligence propriétaire).
 Pour ce faire, vous travaillerez dans une équipe, fraîchement
 constituée, de 5 développeurs et 2 experts financiers.
 Vous avez 5 semaines pour préparer un proof of concept
-opérationnel de votre solution. La 8ème semaine, vous devrez
-présenter la solution auprès de votre client.
+opérationnel de votre solution. 
 
 
 ## Installation
 
-Utilisation de Bootstrap 5.1.3 : installé via npm 
+Utilisation de Bootstrap 5.1.3 : installé via npm   
 Serveur Node.js avec express  
 Bas de données noSQL : MongoDB
 
@@ -29,12 +28,14 @@ Bas de données noSQL : MongoDB
 
 ## Deploiement
 
-Le projet est déployé sur Heroku
+Le projet est déployé sur Heroku  
+Impossible de lier GitHub à Heroku à cause du hack qu'ils ont eu :  
+https://stackoverflow.com/questions/71892543/heroku-and-github-items-could-not-be-retrieved-internal-server-error
 
 ```bash
   heroku login
   heroku create + nom du projet
-  git push heroku master (sauf si github lié à Heroku)
+  git push heroku master 
 ```
 
 ## Sources des images 
