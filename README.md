@@ -18,13 +18,14 @@ opérationnel de votre solution.
 
 Utilisation de Bootstrap 5.1.3 : installé via npm   
 Serveur Node.js avec express  
-Bas de données noSQL : MongoDB
+Base de données noSQL : MongoDB (installation prochainement)
 
 ```bash
+  npm install
   npm start  
-  Tapez la commande : node server.js
-  Ouvrir le navigateur sur localhost:3000
 ```
+
+Ouvrir le navigateur sur localhost:3000
 
 ## Deploiement
 
@@ -33,9 +34,7 @@ Impossible de lier GitHub à Heroku à cause du hack qu'ils ont eu :
 https://stackoverflow.com/questions/71892543/heroku-and-github-items-could-not-be-retrieved-internal-server-error
 
 ```bash
-  heroku login
-  heroku create + nom du projet
-  git push heroku master 
+git push heroku master 
 ```
 
 ## Sources des images 
