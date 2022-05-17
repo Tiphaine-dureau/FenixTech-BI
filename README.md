@@ -16,15 +16,15 @@ opérationnel de votre solution.
 
 ## Installation
 
-Utilisation de Bootstrap 5.1.3 : installé via npm   
+Utilisation de Bootstrap 5.1.3 via npm   
 Serveur Node.js avec express  
-Base de données noSQL : MongoDB (installation prochainement)
+Base de données noSQL : MongoDB - mongoose 
 
 ```bash
   npm install
   npm start  
 ```
-
+npm start est un raccourci configuré pour lancer le serveur   
 Ouvrir le navigateur sur localhost:3000
 
 ## Deploiement
