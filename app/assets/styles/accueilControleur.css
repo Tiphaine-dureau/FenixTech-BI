@@ -7,7 +7,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
     h1.text-center {
         font-size: 20px;
     }
@@ -31,7 +31,7 @@
     }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 451px) {
     .card {
         min-height: 360px;
         max-height: 400px;
@@ -45,8 +45,8 @@
 
 @media screen and (min-width: 900px) {
     .card {
-        max-height: 450px;
-        max-width: 300px;
+        max-height: 400px;
+        max-width: 220px;
     }
     .card-img-top {
         height: 150px;
