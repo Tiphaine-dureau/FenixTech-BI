@@ -8,7 +8,7 @@
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- Own CSS style -->
-        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/style.css" type="text/css" />
         <link
             rel="stylesheet"
             href="./assets/styles/accueilControleur.css"
@@ -94,29 +94,31 @@
         <!-- End : Header -->
         <!-- Start : Main -->
         <div class="container-fluid">
+            <!-- Start : Title Section -->
             <div class="row">
                 <div class="col-10 col-lg-8 my-3 mx-auto my-md-5">
                     <h1 class="text-center">Accueil Contrôleur de gestion</h1>
                 </div>
             </div>
-            <div
-                class="row d-flex justify-content-evenly justify-content-xl-center mx-lg-auto"
+            <!-- End : Title Section-->
+            <!-- Start : Cards Section-->
+            <div class="row d-flex justify-content-evenly justify-content-xl-center align-items-center mx-lg-auto"
             >
                 <div class="col-5 col-lg-3 col-xl-2 p-0">
                     <div
                         class="card mx-md-3 mx-lg-auto mb-3 my-md-5"
                         style="min-width: 139px"
                     >
-                        <img
-                            src="assets/images/img_accueil_controleur/undraw_survey_05s5.png"
-                            class="card-img-top"
-                            alt="accès au formulaire"
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Nouveau formulaire CC6</h5>
-                            <p class="card-text">Some quick example...</p>
-                            <a href="#" class="btn btn-primary">Entrer</a>
-                        </div>
+                            <img
+                                src="assets/images/img_accueil_controleur/undraw_survey_05s5.png"
+                                class="card-img-top"
+                                alt="accès au formulaire"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Nouveau formulaire CC6</h5>
+                                <p class="card-text">Some quick example...</p>
+                                <a href="#" class="btn btn-primary">Entrer</a>
+                            </div>
                     </div>
                 </div>
                 <div class="col-5 col-lg-3 col-xl-2 p-0">
@@ -172,16 +174,104 @@
                             <a href="#" class="btn btn-primary">Entrer</a>
                         </div>
                     </div>
+                    <!-- End : Modal div-->
                 </div>
             </div>
-            <div class="row">
+            <!-- End : Cards Section-->
+            <!-- Start : Modal div-->
+            <div class="row align-items-center">
                 <div class="col d-flex justify-content-center">
-                    <!--TODO Coder la modale pour le gasoil-->
+                    <!-- Button trigger modal -->
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >
+                    Mettre à jour le gasoil
+                    </button>
+                    <!-- Modal -->
+                    <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog modal-dialog-centered justify-content-center">
+                            <!-- Form-->
+                            <form>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            Mettre à jour le gasoil
+                                        </h5>
+                                        <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Accéder aux derniers relevés de prix du
+                                            <a
+                                                href="https://www.cnr.fr/espace-standard/13"
+                                                class="modal__link--cnr-web-site"
+                                                title="Lien vers le site web du Comité national routier"
+                                                target="_blank"
+                                                >Comité national routier
+                                            </a>
+                                        </p>
+                    
+                                        <h6>Nouveau prix en €/l<h6>
+                                        <div class="form-floating mb-3">
+                                            <input type="number"
+                                            class="form-control"
+                                            id="gazoilInput"
+                                            placeholder="1.7153"
+                                            title="Exemple : 1.7153"
+                                            step="0.0001"
+                                            min="0"
+                                            max="100"
+                                            maxlength="6"
+                                            required>
+                                            <label for="gazoilInput">Exemple: 1.7153
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                            value=""
+                                            id="gazoilConfirmation"
+                                            required>
+                                            <label class="form-check-label" for="gazoilConfirmation">
+                                                Confirmer la saisie
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button
+                                        type="button"
+                                        class="btn btn-danger"
+                                        data-bs-dismiss="modal"
+                                        >Annuler
+                                        </button>
+                                        <button
+                                        type="submit"
+                                        class="btn btn-success"
+                                        >Enregistrer
+                                        </button>
+                                    </div> 
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- End: Modal div-->
         </div>
         <!-- End : Main -->
-
+        
         <script src="script.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
