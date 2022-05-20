@@ -20,7 +20,7 @@ server.get('/', (req, res) => {
   res.sendFile('index.html', { root: __dirname });
 })
 
-//On indique le port écouté
+//Indique le port écouté
 server.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 })
@@ -42,8 +42,8 @@ mongoClient.connect(() => {
 /**
  * Pour recevoir / requêter une donnée de la base de données
  * https://www.mongodb.com/docs/v4.2/reference/method/db.collection.find/
- * J'indique le nom de la collection et le document associé de mongodb
- * Je convertis en array le résultat
+ * Indique le nom de la collection et le document associé de mongodb
+ * Convertis en array le résultat
  */
 server.get('/ping', function (req, res) {
   console.info("called ping endpoint");
@@ -62,7 +62,7 @@ server.get('/simulator', function (req, res) {
 })
 
 /**
- * Pour modifier une donnée de la base de données
+ * Pour modifier des données de la base de données
  */
 
 server.put('/simulator/:id', function (req, res) {
@@ -71,6 +71,23 @@ server.put('/simulator/:id', function (req, res) {
   const collection = mongoClient.db('FenixTechDatabase').collection('test');
   collection.updateOne({ _id: ObjectId(reqId) }, { $set: req.body }).then(() => {
     collection.find({ _id: ObjectId(reqId) }).toArray(function (err, results) {
+      res.statusCode = 200;
+      res.send(results[0]);
+    })
+  }).catch(() => {
+    res.statusCode = 500;
+    res.send();
+  })
+})
+
+/**
+ * Pour ajouter des données dans la base de donnée
+ */
+server.post('/simulator', function (req, res) {
+  console.info("called simulator endpoint and create new simulation");
+  const collection = mongoClient.db('FenixTechDatabase').collection('test');
+  collection.insertOne({ ...req.body }).then((doc) => {
+    collection.find({ _id: ObjectId(doc.insertedId) }).toArray(function (err, results) {
       res.statusCode = 200;
       res.send(results[0]);
     })
