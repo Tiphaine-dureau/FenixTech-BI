@@ -24,13 +24,13 @@
 
         <title>FenixTech BI- Accueil Contrôleur</title>
     </head>
-    <body>
+    <body class="bg-light">
         <!-- Start : Header -->
-        <div class="container-fluid">
+        <div class="container-fluid sticky-top bg-dark">
             <div class="row">
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark" aria-labelledby="#">
                     <div class="container-fluid px-0">
-                        <a class="navbar-brand" href="index.html"
+                        <a class="navbar-brand align-self-start" href="index.html"
                             ><img
                                 class="bg-light rounded-3"
                                 src="assets\images\logo_logiciel_150ppp.png"
@@ -58,36 +58,104 @@
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item mx-4">
                                     <a
-                                        class="nav-link active"
+                                        class="nav-link active disabled"
                                         aria-current="page"
-                                        href="index.html"
+                                        href="accueilControleur.html"
                                         >Accueil</a
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link" href="cc6.html">Nouveau formulaire CC6</a>
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link" href="formulaireSimulateur.html">Simulateur par camion</a>
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled"
-                                        >Mes paramètres</a
-                                    >
+                                    <a class="nav-link" href="#">Coût de revient actuel</a>
                                 </li>
-                                <li class="nav-item mx-4"></li>
+                                <li class="nav-item mx-4">
+                                    <a class="nav-link" href="#">Données des années précédentes</a>
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-outline-light bg-dark text-white dropdown-toggle"
+                                            type="button"
+                                            id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="18"
+                                                height="18"
+                                                fill="white"
+                                                class="bi bi-person-circle"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                                                />
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                                                />
+                                            </svg>
+                                            Mon espace
+                                        </button>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-dark bg-dark"
+                                            aria-labelledby="dropdownMenuButton2"
+                                        >
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon profil</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mes paramètres</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon historique</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item"
+                                                    href="index.html"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="18"
+                                                        height="18"
+                                                        fill="currentColor"
+                                                        class="bi bi-plugin"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"
+                                                        />
+                                                    </svg>
+                                                    Déconnexion</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
-
-                            <div class="d-flex">
-                                <a href="index.html">
-                                    <button
-                                        class="btn btn-outline-light ms-4"
-                                        type="button"
-                                    >
-                                        Déconnexion
-                                    </button>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </nav>
@@ -98,76 +166,81 @@
         <div class="container">
             <!-- Start : Title Section -->
             <div class="row">
-                <div class="col-10 col-lg-8 my-3 mx-auto my-md-5">
+                <div class="col-10 col-lg-8 my-3 mx-auto my-md-5 my-lg-3">
                     <h1 class="text-center">Accueil Contrôleur de gestion</h1>
                 </div>
             </div>
             <!-- End : Title Section-->
             <!-- Start : Cards Section-->
 
-            <div class="row row-align-items-center justify-content-center row-cols-1 row-cols-md-3 g-4 mb-5">
-                <div class="col-10 col-sm-5 col-md-4  col-lg-3 col-xl-3 mx-3 mx-lg-0">
-                    <div class="card h-100">
-                        <img src="assets/images/img_accueil_controleur/undraw_survey_05s5.png"
-                        class="card-img-top"
-                        alt="accès au formulaire">
-                        <div class="card-body">
+            <div class="row row-align-items-center justify-content-center row-cols-1 row-cols-md-3 g-4 mb-3 my-lg-3">
+                <div class="col-10 col-sm-5 col-md-4 col-lg-3 col-xl-3 mx-3 mx-lg-0">
+                    <div class="card h-100 shadow">
+                        <img src="assets/images/img_accueil_controleur/undraw_survey_05s5.svg"
+                        class="card-img-top p-3"
+                        alt="accès au formulaire"
+                        height="180px">
+                        
+                        <div class="card-body text-center">
                             <h5 class="card-title">Nouveau formulaire CC6</h5>
                             <p class="card-text">Some quick example...</p>
                             
                         </div>
                         <div class="card-footer text-center">
-                            <a href="cc6.html" class="btn btn-primary">Entrer</a>
+                            <a href="cc6.html" class="btn btn-dark w-50 stretched-link"style="background-color: var(--bs-gray-dark);">Entrer</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-10 col-sm-5 col-md-4  col-lg-3 col-xl-3 mx-3 mx-lg-0">
-                    <div class="card h-100">
+                    <div class="card h-100 shadow">
                         <img
-                            src="assets/images/img_accueil_controleur/undraw_Analysis_re_w2vd.png"
-                            class="card-img-top"
+                            src="assets/images/img_accueil_controleur/undraw_predictive_analytics_re_wxt8.svg"
+                            class="card-img-top p-3"
                             alt="accès au simulateur"
+                            height="180px"
                         />
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Simulateur par camion</h5>
                             <p class="card-text">Some quick example...</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="formulaireSimulateur.html" class="btn btn-primary">Entrer</a>
+                            <a href="formulaireSimulateur.html" class="btn btn-dark w-50 stretched-link" style="background-color: var(--bs-gray-dark);">Entrer</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-10 col-sm-5 col-md-4  col-lg-3 col-xl-3 mx-3 mx-lg-0">
-                    <div class="card h-100">
+                    <div class="card h-100 shadow">
                         <img
-                            src="assets/images/img_accueil_controleur/undraw_Finance_re_gnv2.png"
-                            class="card-img-top"
+                            src="assets/images/img_accueil_controleur/undraw_finance_re_gnv2.svg"
+                            class="card-img-top p-3"
                             alt="accès au coût de revient"
+                            height="180px"
                         />
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Voir le coût de revient</h5>
                             <p class="card-text">Some quick example...</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="#" class="btn btn-primary">Entrer</a>
+                            <a href="#" class="btn btn-dark w-50 stretched-link" style="background-color: var(--bs-gray-dark);">Entrer</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-10 col-sm-5 col-md-4  col-lg-3 col-xl-3 mx-3 mx-lg-0">
-                    <div class="card h-100">
+                    <div class="card h-100 shadow">
                         <img
-                            src="assets/images/img_accueil_controleur/undraw_Folder_files_re_2cbm.png"
-                            class="card-img-top"
+                            src="assets/images/img_accueil_controleur/undraw_folder_files_re_2cbm.svg"
+                            class="card-img-top p-3"
                             alt="accès aux données des années précédentes"
+                            height="180px"
                         />
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title">
                                 Données des années précédentes
                             </h5>
                             <p class="card-text">Some quick example...</p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="#" class="btn btn-primary">Entrer</a>
+                            <a href="#" class="btn btn-dark w-50 stretched-link" style="background-color: var(--bs-gray-dark);">Entrer</a>
                         </div>
                     </div>
                 </div>
@@ -175,22 +248,23 @@
             <!-- End : Cards Section-->
             <!-- Start : Modal div-->
             <div class="row align-items-center">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center my-5">
                     <!-- Button trigger modal -->
                     <button
                     type="button"
-                    class="btn btn-primary"
+                    class="btn btn-dark"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                    data-bs-target="#modal_gasoil"
+                    style="background-color: var(--bs-indigo);"
                     >
-                    Mettre à jour le gasoil
+                    Mettre à jour le prix du gasoil
                     </button>
                     <!-- Modal -->
                     <div
                         class="modal fade"
-                        id="exampleModal"
+                        id="modal_gasoil"
                         tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
+                        aria-labelledby="maj_gasoil"
                         aria-hidden="true"
                     >
                         <div class="modal-dialog modal-dialog-centered justify-content-center">
@@ -198,8 +272,8 @@
                             <form>
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">
-                                            Mettre à jour le gasoil
+                                        <h5 class="modal-title" id="maj_gasoil">
+                                            Mettre à jour le prix du gasoil
                                         </h5>
                                         <button
                                         type="button"
@@ -218,7 +292,6 @@
                                                 >Comité national routier
                                             </a>
                                         </p>
-                    
                                         <h6>Nouveau prix en €/l<h6>
                                         <div class="form-floating mb-3">
                                             <input type="number"
@@ -231,7 +304,7 @@
                                             max="100"
                                             maxlength="6"
                                             required>
-                                            <label for="gazoilInput">Exemple: 1.7153
+                                            <label for="gazoilInput" class="text-muted" >Exemple: 1.7153
                                             </label>
                                         </div>
                                         <div class="form-check">
@@ -266,7 +339,43 @@
             <!-- End: Modal div-->
         </div>
         <!-- End : Main -->
-        
+        <!-- Footer -->
+        <footer class="container-fluid bg-dark">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark " aria-labelledby="#">
+                    <div class="container-fluid justify-content-evenly">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-white"
+                                    aria-current="page"
+                                    href="#"
+                                    >A propos de FénixTech</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">                                       <a class="nav-link text-white" href="#"
+                                    >Mentions légales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="https://www.youtube.com/watch?v=n-xOQaVKFgo"
+                                    target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                    </svg></i>
+                                </a></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="col-12 d-flex justify-content-center text-light">
+                    <p class="text-muted"><small>FénixTech © 2022</small></p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
         <script src="script.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
