@@ -2,10 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- Own CSS style -->
         <link
@@ -17,6 +14,7 @@
         <link
             href="../node_modules/bootstrap/dist/css/bootstrap.css"
             rel="stylesheet"
+            type="text/css"
         />
         <!-- Favicon -->
         <link rel="shortcut icon" href="#" type="image/png" />
@@ -27,14 +25,17 @@
         <!-- Start : Header -->
         <header class="container-fluid sticky-top">
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-dark">
+                <nav
+                    class="navbar navbar-expand-lg navbar-dark"
+                    aria-label="Barre de navigation"
+                >
                     <div class="container-fluid px-0">
                         <a
                             class="navbar-brand align-self-start"
                             href="index.html"
                             ><img
                                 class="bg-light rounded-3"
-                                src="assets\images\logo_logiciel_150ppp.png"
+                                src="assets/images/logo_logiciel_150ppp.png"
                                 width="40"
                                 height="40"
                                 alt="logo - lien clickable"
@@ -209,7 +210,7 @@
             <!-- Start : Form-->
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-md-10 col-lg-6">
-                    <form action="" method="">
+                    <form action="#" method="#">
                         <div
                             class="accordion mb-3"
                             id="accordionPanelsStayOpenExample"
@@ -305,7 +306,7 @@
                                                     <input
                                                         type="number"
                                                         class="form-control"
-                                                        id="kilometrage_annuel moyen"
+                                                        id="kilometrage_annuel_moyen"
                                                         placeholder=""
                                                         title="Exemple : 9999"
                                                         step="1"
@@ -313,7 +314,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="kilometrage_annuel moyen"
+                                                        for="kilometrage_annuel_moyen"
                                                         class="text-muted"
                                                         >Ex: 9999
                                                     </label>
@@ -733,7 +734,7 @@
                                                         data-bs-toggle="collapse"
                                                         data-bs-target="#flush-collapseFour"
                                                         aria-expanded="false"
-                                                        aria-controls="flush-collapse4"
+                                                        aria-controls="flush-collapseFour"
                                                     >
                                                         Les péages
                                                     </button>
@@ -881,7 +882,6 @@
                             <button
                                 class="btn btn-outline-success"
                                 type="submit"
-                                role="button"
                             >
                                 Valider
                             </button>

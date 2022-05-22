@@ -2,10 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- Own CSS style -->
         <link
@@ -17,6 +14,7 @@
         <link
             href="../node_modules/bootstrap/dist/css/bootstrap.css"
             rel="stylesheet"
+            type="text/css"
         />
         <!-- Favicon -->
         <link rel="shortcut icon" href="#" type="image/png" />
@@ -27,12 +25,17 @@
         <!-- Start : Header -->
         <header class="container-fluid sticky-top">
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-dark">
+                <nav
+                    class="navbar navbar-expand-lg navbar-dark"
+                    aria-label="Barre de navigation"
+                >
                     <div class="container-fluid px-0">
-                        <a class="navbar-brand align-self-start" href="index.html"
+                        <a
+                            class="navbar-brand align-self-start"
+                            href="index.html"
                             ><img
                                 class="bg-light rounded-3"
-                                src="assets\images\logo_logiciel_150ppp.png"
+                                src="assets/images/logo_logiciel_150ppp.png"
                                 width="40"
                                 height="40"
                                 alt="logo - lien clickable"
@@ -64,16 +67,28 @@
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link active disabled" href="cc6.html">Nouveau formulaire CC6</a>
+                                    <a
+                                        class="nav-link active disabled"
+                                        href="cc6.html"
+                                        >Nouveau formulaire CC6</a
+                                    >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled" href="formulaireSimulateur.html">Simulateur par camion</a>
+                                    <a
+                                        class="nav-link disabled"
+                                        href="formulaireSimulateur.html"
+                                        >Simulateur par camion</a
+                                    >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled" href="#">Coût de revient actuel</a>
+                                    <a class="nav-link disabled" href="#"
+                                        >Coût de revient actuel</a
+                                    >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled" href="#">Données des années précédentes</a>
+                                    <a class="nav-link disabled" href="#"
+                                        >Données des années précédentes</a
+                                    >
                                 </li>
                                 <li class="nav-item mx-4">
                                     <div class="dropdown">
@@ -177,10 +192,20 @@
                 class="row align-items-center justify-content-center mb-1 mb-lg-1"
             >
                 <div class="col col-md-10 col-lg-6">
-                    <div class="alert alert-info alert-dismissible fade show " role="alert">
+                    <div
+                        class="alert alert-info alert-dismissible fade show"
+                        role="alert"
+                    >
                         Entrez les montants en Euros (€).
-                        <span class="fst-italic">Tous les champs sont obligatoires.</span> 
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <span class="fst-italic"
+                            >Tous les champs sont obligatoires.</span
+                        >
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"
+                        ></button>
                     </div>
                 </div>
             </div>
@@ -188,7 +213,7 @@
             <!-- Start : Form-->
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-md-10 col-lg-6">
-                    <form action="" method="">
+                    <form action="#" method="#">
                         <div
                             class="accordion mb-3"
                             id="accordionPanelsStayOpenExample"
@@ -603,8 +628,9 @@
                                         aria-expanded="false"
                                         aria-controls="panelsStayOpen-collapse9"
                                     >
-                                    <span class="fw-bold"
-                                    >Dotations aux amortissements
+                                        <span class="fw-bold"
+                                            >Dotations aux amortissements</span
+                                        >
                                     </button>
                                 </h2>
                                 <div
@@ -629,7 +655,10 @@
                                 id="confirmation_checkbox"
                                 required
                             />
-                            <label class="form-check-label mb-3" for="confirmation_checkbox">
+                            <label
+                                class="form-check-label mb-3"
+                                for="confirmation_checkbox"
+                            >
                                 Confirmer la saisie
                             </label>
                         </div>
@@ -638,7 +667,6 @@
                             <button
                                 class="btn btn-outline-success"
                                 type="submit"
-                                role="button"
                             >
                                 Valider
                             </button>
@@ -747,9 +775,9 @@
         <!-- Footer -->
         <!-- Start : Scripts -->
         <script
-        src="https://kit.fontawesome.com/8b32e839a3.js"
-        crossorigin="anonymous"
-    ></script>
+            src="https://kit.fontawesome.com/8b32e839a3.js"
+            crossorigin="anonymous"
+        ></script>
         <script src="script.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
