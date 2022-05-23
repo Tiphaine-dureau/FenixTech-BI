@@ -1,0 +1,5 @@
+header.sticky-top,
+header.sticky-top .navbar,
+header.sticky-top ul {
+    background-color: #282d32 !important;
+}
