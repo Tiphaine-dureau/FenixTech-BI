@@ -201,7 +201,421 @@
             </div>
             <!-- End : alert -->
             <!-- Start : Form-->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <form action="#" method="#">
+                        <div
+                            class="accordion mb-3"
+                            id="accordionPanelsStayOpenExample"
+                        >
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingOne"
+                                >
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        <span class="fw-bold"
+                                            >Description de l'opération</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseOne"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
+                                    <div class="accordion-body">
+                                        <div
+                                            class="accordion accordion-flush"
+                                            id="accordionFlushExample"
+                                        >
+                                            <div class="accordion-item">
+                                                <h2
+                                                    class="accordion-header"
+                                                    id="flush-headingOne"
+                                                >
+                                                    <button
+                                                        class="accordion-button collapsed"
+                                                        type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#flush-collapseOne"
+                                                        aria-expanded="false"
+                                                        aria-controls="flush-collapseOne"
+                                                    >
+                                                        Parcours d'approche
+                                                        jusqu'au point de
+                                                        chargement : relation AB
+                                                    </button>
+                                                </h2>
+                                                <div
+                                                    id="flush-collapseOne"
+                                                    class="accordion-collapse collapse"
+                                                    aria-labelledby="flush-headingOne"
+                                                    data-bs-parent="#accordionFlushExample"
+                                                >
+                                                    <div class="accordion-body">
+                                                        <div
+                                                            class="form-floating mb-3"
+                                                        >
+                                                            <input
+                                                                type="number"
+                                                                class="form-control"
+                                                                id="distance_parcours"
+                                                                placeholder="20.00"
+                                                                step="0.01"
+                                                                min="0"
+                                                            />
+                                                            <label
+                                                                for="distance_parcours"
+                                                                class="text-muted"
+                                                                >Distance (en
+                                                                kilomètres)</label
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="form-floating mb-3"
+                                                        >
+                                                            <input
+                                                                type="number"
+                                                                class="form-control"
+                                                                id="peage_parcours"
+                                                                placeholder="123.45"
+                                                                step="0.01"
+                                                                min="0"
+                                                            />
+                                                            <label
+                                                                for="peage_parcours"
+                                                                class="text-muted"
+                                                                >Péages (en
+                                                                Euros €)</label
+                                                            >
+                                                        </div>
 
+                                                        <div
+                                                            class="form-floating mb-3"
+                                                        >
+                                                            <input
+                                                                type="number"
+                                                                class="form-control"
+                                                                id="temps_parcours"
+                                                                placeholder="19.99"
+                                                                step="0.01"
+                                                                min="0"
+                                                            />
+                                                            <label
+                                                                for="temps_parcours"
+                                                                class="text-muted"
+                                                                >Temps (en
+                                                                heures)</label
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2
+                                                    class="accordion-header"
+                                                    id="flush-headingTwo"
+                                                >
+                                                    <button
+                                                        class="accordion-button collapsed"
+                                                        type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#flush-collapseTwo"
+                                                        aria-expanded="false"
+                                                        aria-controls="flush-collapseTwo"
+                                                    >
+                                                        Temps de chargement B
+                                                    </button>
+                                                </h2>
+                                                <div
+                                                    id="flush-collapseTwo"
+                                                    class="accordion-collapse collapse"
+                                                    aria-labelledby="flush-headingTwo"
+                                                    data-bs-parent="#accordionFlushExample"
+                                                >
+                                                    <div class="accordion-body">
+                                                        Placeholder content for
+                                                        this accordion, which is
+                                                        intended to demonstrate
+                                                        the
+                                                        <code
+                                                            >.accordion-flush</code
+                                                        >
+                                                        class. This is the
+                                                        second item's accordion
+                                                        body. Let's imagine this
+                                                        being filled with some
+                                                        actual content.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2
+                                                    class="accordion-header"
+                                                    id="flush-headingThree"
+                                                >
+                                                    <button
+                                                        class="accordion-button collapsed"
+                                                        type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#flush-collapseThree"
+                                                        aria-expanded="false"
+                                                        aria-controls="flush-collapseThree"
+                                                    >
+                                                        Transport en charge:
+                                                        relation BC
+                                                    </button>
+                                                </h2>
+                                                <div
+                                                    id="flush-collapseThree"
+                                                    class="accordion-collapse collapse"
+                                                    aria-labelledby="flush-headingThree"
+                                                    data-bs-parent="#accordionFlushExample"
+                                                >
+                                                    <div class="accordion-body">
+                                                        Placeholder content for
+                                                        this accordion, which is
+                                                        intended to demonstrate
+                                                        the
+                                                        <code
+                                                            >.accordion-flush</code
+                                                        >
+                                                        class. This is the third
+                                                        item's accordion body.
+                                                        Nothing more exciting
+                                                        happening here in terms
+                                                        of content, but just
+                                                        filling up the space to
+                                                        make it look, at least
+                                                        at first glance, a bit
+                                                        more representative of
+                                                        how this would look in a
+                                                        real-world application.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2
+                                                    class="accordion-header"
+                                                    id="flush-headingFour"
+                                                >
+                                                    <button
+                                                        class="accordion-button collapsed"
+                                                        type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#flush-collapseFour"
+                                                        aria-expanded="false"
+                                                        aria-controls="flush-collapseFour"
+                                                    >
+                                                        Temps de chargement en C
+                                                    </button>
+                                                </h2>
+                                                <div
+                                                    id="flush-collapseFour"
+                                                    class="accordion-collapse collapse"
+                                                    aria-labelledby="flush-headingFour"
+                                                    data-bs-parent="#accordionFlushExample"
+                                                >
+                                                    <div class="accordion-body">
+                                                        Placeholder content for
+                                                        this accordion, which is
+                                                        intended to demonstrate
+                                                        the
+                                                        <code
+                                                            >.accordion-flush</code
+                                                        >
+                                                        class. This is the third
+                                                        item's accordion body.
+                                                        Nothing more exciting
+                                                        happening here in terms
+                                                        of content, but just
+                                                        filling up the space to
+                                                        make it look, at least
+                                                        at first glance, a bit
+                                                        more representative of
+                                                        how this would look in a
+                                                        real-world application.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingThree"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree"
+                                    >
+                                        <span class="fw-bold"
+                                            >Retour au point de chargement :
+                                            relation CB</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseThree"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree"
+                                >
+                                    <div class="accordion-body">
+                                        Placeholder content for this accordion,
+                                        which is intended to demonstrate the
+                                        <code>.accordion-flush</code>
+                                        class. This is the third item's
+                                        accordion body. Nothing more exciting
+                                        happening here in terms of content, but
+                                        just filling up the space to make it
+                                        look, at least at first glance, a bit
+                                        more representative of how this would
+                                        look in a real-world application.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingTwo"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo"
+                                    >
+                                        <span class="fw-bold">
+                                            Rappel de la formulation
+                                            trinôme</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo"
+                                >
+                                    <div class="accordion-body">
+                                        Placeholder content for this accordion,
+                                        which is intended to demonstrate the
+                                        <code>.accordion-flush</code>
+                                        class. This is the third item's
+                                        accordion body. Nothing more exciting
+                                        happening here in terms of content, but
+                                        just filling up the space to make it
+                                        look, at least at first glance, a bit
+                                        more representative of how this would
+                                        look in a real-world application.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="checkbox_de_confirmation"
+                                required
+                            />
+                            <label
+                                class="form-check-label mb-3"
+                                for="checkbox_de_confirmation"
+                            >
+                                Confirmer la saisie
+                            </label>
+                        </div>
+                        <!-- Start : Form Buttons -->
+                        <div class="d-grid gap-4 col-10 col-md-6 mx-auto">
+                            <button
+                                class="btn btn-outline-success"
+                                type="submit"
+                            >
+                                Valider
+                            </button>
+                            <!-- Button trigger modal -->
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"
+                            >
+                                Annuler et quitter
+                            </button>
+
+                            <!-- Modal -->
+                            <div
+                                class="modal fade"
+                                id="staticBackdrop"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                tabindex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5
+                                                class="modal-title"
+                                                id="staticBackdropLabel"
+                                            >
+                                                Avertissement
+                                            </h5>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Vous êtes sur le point de quitter la
+                                            page sans enregistrer votre saisie.
+                                            <br />
+                                            Etes-vous sûr ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Retourner au formulaire
+                                            </button>
+                                            <a
+                                                href="accueilCommercial.html"
+                                                class="btn btn-outline-danger"
+                                            >
+                                                Quitter
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End : Form Buttons -->
+                    </form>
+                    <!-- End : Form-->
+                </div>
+            </div>
             <!-- End : Form-->
         </div>
         <!-- End : Main -->
@@ -255,4 +669,3 @@
         <!-- End : Scripts -->
     </body>
 </html>
-<!--TODO Mettre à jour les ID's-->
