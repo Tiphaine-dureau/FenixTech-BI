@@ -19,7 +19,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="#" type="image/png" />
 
-        <title>FenixTech BI- Accueil Commercial</title>
+        <title>FenixTech BI- Formulaire OPE</title>
     </head>
     <body class="bg-light">
         <!-- Start : Header -->
@@ -60,26 +60,27 @@
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item mx-4">
                                     <a
-                                        class="nav-link active disabled"
+                                        class="nav-link disabled"
                                         aria-current="page"
-                                        href="accueilCommercial.html"
+                                        href="accueilControleur.html"
                                         >Accueil</a
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
                                     <a
-                                        class="nav-link"
+                                        class="nav-link active disabled"
                                         href="formulaireOpe.html"
                                         >Nouveau formulaire OPE</a
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
                                     <a
-                                        class="nav-link"
-                                        href="coutDeRevientActuel.html"
-                                        >Coût de revient actuel</a
+                                        class="nav-link disabled"
+                                        href="formulaireSimulateur.html"
+                                        >Simulateur par camion</a
                                     >
                                 </li>
+
                                 <li class="nav-item mx-4">
                                     <div class="dropdown">
                                         <button
@@ -167,89 +168,45 @@
         </header>
         <!-- End : Header -->
         <!-- Start : Main -->
-        <div class="container-fluid">
-            <!-- Start : Title -->
-            <div class="row">
-                <div class="col-10 col-lg-8 my-3 mx-auto my-3">
-                    <h1 class="text-center text-primary">Accueil Commercial</h1>
+        <div class="container-fluid mt-3 mt-lg-5">
+            <!-- Start Title-->
+            <div
+                class="row align-items-center justify-content-center mb-3 mb-lg-5"
+            >
+                <div class="col col-lg-6 justify-content-center">
+                    <h1 class="text-center">Nouveau formulaire OPE</h1>
                 </div>
             </div>
-            <!-- End : Title -->
-            <!-- Start : Cards -->
-            <div class="row justify-content-center">
-                <div class="col-10">
+            <!-- End Title-->
+            <!-- Start : alert -->
+            <div
+                class="row align-items-center justify-content-center mb-1 mb-lg-1"
+            >
+                <div class="col col-md-10 col-lg-6">
                     <div
-                        class="card card my-3 mx-auto shadow"
-                        style="max-width: 400px"
+                        class="alert alert-info alert-dismissible fade show"
+                        role="alert"
                     >
-                        <div class="row g-0">
-                            <div class="col-md-4 align-self-center">
-                                <img
-                                    src="assets/images/img_accueil_controleur/undraw_survey_05s5.svg"
-                                    class="img-fluid p-2 rounded-start"
-                                    alt="..."
-                                    style="height: 200px"
-                                />
-                            </div>
-                            <div class="col-md-8 align-self-center">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">
-                                        Nouveau formulaire OPE
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card-footer text-center">
-                                    <a
-                                        href="formulaireOpe.html"
-                                        class="btn btn-primary w-50 stretched-link"
-                                        >Entrer</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10">
-                    <div
-                        class="card my-3 mx-auto shadow"
-                        style="max-width: 400px"
-                    >
-                        <div class="row g-0">
-                            <div class="col-md-4 align-self-center">
-                                <img
-                                    src="assets/images/img_accueil_commercial/undraw_digital_currency_qpak.svg"
-                                    class="img-fluid p-2 rounded-start"
-                                    alt="voir le coût de revient"
-                                    style="height: 200px"
-                                />
-                            </div>
-                            <div class="col-md-8 align-self-center">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">
-                                        Voir le coût de revient de l'année en
-                                        cours
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card-footer text-center">
-                                    <a
-                                        href="coutDeRevientActuel.html"
-                                        class="btn btn-primary w-50 stretched-link"
-                                        >Entrer</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
+                        <span class="fst-italic"
+                            >Tous les champs sont obligatoires.</span
+                        >
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"
+                        ></button>
                     </div>
                 </div>
             </div>
-            <!-- End : Cards -->
+            <!-- End : alert -->
+            <!-- Start : Form-->
+
+            <!-- End : Form-->
         </div>
         <!-- End : Main -->
         <!-- Footer -->
-        <div class="footer-dark">
+        <div class="footer-dark mt-5">
             <footer>
                 <div class="container">
                     <div class="row">
@@ -283,6 +240,7 @@
             </footer>
         </div>
         <!-- Footer -->
+        <!-- Start : Scripts -->
         <script
             src="https://kit.fontawesome.com/8b32e839a3.js"
             crossorigin="anonymous"
@@ -294,5 +252,7 @@
             activer Javascript dans les paramètres de votre
             navigateur.</noscript
         >
+        <!-- End : Scripts -->
     </body>
 </html>
+<!--TODO Mettre à jour les ID's-->
