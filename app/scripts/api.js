@@ -13,8 +13,6 @@ function postForm(formTwo) {
   }).then((response) => {
     return response.json()
       .then(function (data) {
-        getNumberTollgate().value = data.numberTollgate;
-        getTotalPriceTollgate().value = data.totalPriceTollgate;
         // TODO hide spinner
         // TODO show success toast
       });
@@ -36,11 +34,20 @@ function putForm(formData) {
   }).then((response) => {
     return response.json()
       .then(function (data) {
-        getDistanceEl().value = data.distance;
-        getCarburantEl().value = data.carburant;
         // TODO hide spinner
         // TODO show success toast
       });
+  })
+}
+
+/**
+ * Appelle l'API GET cc6Form avec l'année courante en paramètre
+ * @returns {Promise<any>} Les données du formulaire CC6 de l'année courante
+ */
+async function getCC6Form() {
+  const todayYear = new Date().getFullYear();
+  return fetch(`${window.location.origin}/cc6Form?year=${todayYear}`, { method: 'GET' }).then((response) => {
+    return response.json().then((data) => data);
   })
 }
 
@@ -58,8 +65,6 @@ function initFetching() {
   fetch(`${window.location.origin}/simulator`, { method: 'GET' }).then((response) => {
     return response.json().then(function (data) {
       currentDocId = data._id;
-      getCarburantEl().value = data.carburant;
-      getDistanceEl().value = data.distance;
     });
   })
 }
