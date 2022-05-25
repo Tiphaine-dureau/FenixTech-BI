@@ -59,7 +59,7 @@
                         </div>
                         <div class="card-body">
                             <!-- formulaire de connexion -->
-                            <form action="#" method="#">
+                            <form action="#" method="post" id="formConnection">
                                 <div class="form-group row mb-3">
                                     <label
                                         for="email_address"
@@ -119,7 +119,11 @@
                                     </a>
                                 </div>
                             </form>
+
                             <!-- Fin de formulaire de connexion -->
+                        </div>
+                        <div class="card-footer" style="height: 41px">
+                            <div id="error" class="mb-0 pb-0"></div>
                         </div>
                     </div>
                 </div>
@@ -162,6 +166,7 @@
             src="https://kit.fontawesome.com/8b32e839a3.js"
             crossorigin="anonymous"
         ></script>
+        <script src="connexion.js"></script>
         <script src="script.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
