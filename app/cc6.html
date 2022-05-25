@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Own CSS style -->
+        <link
+            href="./assets/styles/style.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Bootstrap CSS style -->
+        <link
+            href="../node_modules/bootstrap/dist/css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="#" type="image/png" />
+
+        <title>FenixTech BI- Formulaire CC6</title>
+    </head>
+    <body class="bg-light">
+        <!-- Start : Header -->
+        <header class="container-fluid sticky-top">
+            <div class="row">
+                <nav
+                    class="navbar navbar-expand-xl navbar-dark"
+                    aria-label="Barre de navigation"
+                >
+                    <div class="container-fluid px-0">
+                        <a
+                            class="navbar-brand align-self-start"
+                            href="index.html"
+                            ><img
+                                class="bg-light rounded-3"
+                                src="assets/images/logo_logiciel_150ppp.png"
+                                width="40"
+                                height="40"
+                                alt="logo - lien clickable"
+                            />
+                            <span class="ps-3">FENIXCost&Flux</span></a
+                        >
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarContent"
+                            aria-controls="navbarContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            class="collapse navbar-collapse"
+                            id="navbarContent"
+                        >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link disabled"
+                                        aria-current="page"
+                                        href="accueilControleur.html"
+                                        >Accueil</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link active disabled"
+                                        href="cc6.html"
+                                        >Nouveau formulaire CC6</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link disabled"
+                                        href="formulaireSimulateur.html"
+                                        >Simulateur par camion</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a class="nav-link disabled" href="#"
+                                        >Coût de revient actuel</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a class="nav-link disabled" href="#"
+                                        >Données des années précédentes</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-outline-light bg-dark text-white dropdown-toggle"
+                                            type="button"
+                                            id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="18"
+                                                height="18"
+                                                fill="white"
+                                                class="bi bi-person-circle"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                                                />
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                                                />
+                                            </svg>
+                                            Mon espace
+                                        </button>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-dark bg-dark"
+                                            aria-labelledby="dropdownMenuButton2"
+                                        >
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon profil</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mes paramètres</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon historique</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item text-warning"
+                                                    href="index.html"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="18"
+                                                        height="18"
+                                                        fill="currentColor"
+                                                        class="bi bi-plugin"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"
+                                                        />
+                                                    </svg>
+                                                    Déconnexion</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End : Header -->
+        <!-- Start : Main -->
+        <div class="container-fluid mt-3 mt-lg-5">
+            <!-- Start Title-->
+            <div
+                class="row align-items-center justify-content-center mb-3 mb-lg-5"
+            >
+                <div class="col col-lg-6 justify-content-center">
+                    <h1 class="text-center">Nouveau formulaire CC6</h1>
+                </div>
+            </div>
+            <!-- End Title-->
+            <!-- Start : alert -->
+            <div
+                class="row align-items-center justify-content-center mb-1 mb-lg-1"
+            >
+                <div class="col col-md-10 col-lg-6">
+                    <div
+                        class="alert alert-info alert-dismissible fade show"
+                        role="alert"
+                    >
+                        Entrez les montants en Euros (€).
+                        <span class="fst-italic"
+                            >Tous les champs sont obligatoires.</span
+                        >
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                </div>
+            </div>
+            <!-- End : alert -->
+            <!-- Start : Form-->
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <form action="#" method="#">
+                        <div
+                            class="accordion mb-3"
+                            id="accordionPanelsStayOpenExample"
+                        >
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingOne"
+                                >
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        <span class="fw-bold"
+                                            >Achats (hors pneus,
+                                            gasoil...)</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseOne"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
+                                    <div class="accordion-body pt-3 pb-0">
+                                        <div
+                                            class="row d-flex flex-column flex-sm-row"
+                                        >
+                                            <div class="col col-md-8 col-xxl-9">
+                                                <p>
+                                                    Achats consommés pour
+                                                    l'entretien : huiles,
+                                                    lubrifiants, pièces
+                                                </p>
+                                            </div>
+
+                                            <div class="col col-md-4 col-xxl-3">
+                                                <div class="form-floating mb-4">
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="achat_entretien"
+                                                        placeholder=""
+                                                        title="Exemple : 1234.56"
+                                                        step="0.01"
+                                                        min="0"
+                                                        required
+                                                    />
+                                                    <label
+                                                        for="achat_entretien"
+                                                        class="text-muted"
+                                                        >Ex: 1234.56
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="row d-flex flex-column flex-sm-row"
+                                        >
+                                            <div class="col col-md-8 col-xxl-9">
+                                                <p>
+                                                    Achats consommés de
+                                                    fournitures, petit outillage
+                                                    pour l'atelier
+                                                </p>
+                                            </div>
+
+                                            <div class="col col-md-4 col-xxl-3">
+                                                <div class="mb-3">
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="achat_atelier"
+                                                        placeholder=""
+                                                        title="Exemple : 9999.99"
+                                                        step="0.01"
+                                                        min="0"
+                                                        required
+                                                    />
+                                                    <label
+                                                        for="achat_atelier"
+                                                        class="text-muted"
+                                                    >
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="row d-flex flex-column flex-sm-row"
+                                        >
+                                            <div class="col col-md-8 col-xxl-9">
+                                                <p>
+                                                    Achats consommés de
+                                                    fournitures administratives
+                                                </p>
+                                            </div>
+
+                                            <div class="col col-md-4 col-xxl-3">
+                                                <div class="mb-3">
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="achat_adminFourniture"
+                                                        placeholder=""
+                                                        title="Exemple : 9999.99"
+                                                        step="0.01"
+                                                        min="0"
+                                                        required
+                                                    />
+                                                    <label
+                                                        for="achat_adminFourniture"
+                                                        class="text-muted"
+                                                    >
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="row d-flex flex-column flex-sm-row"
+                                        >
+                                            <div class="col col-md-8 col-xxl-9">
+                                                <p>
+                                                    Achats non stockables (eau,
+                                                    gaz, électricité)
+                                                </p>
+                                            </div>
+
+                                            <div class="col col-md-4 col-xxl-3">
+                                                <div class="mb-3">
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="achat_fourniture_non_stockable"
+                                                        placeholder=""
+                                                        title="Exemple : 9999.99"
+                                                        step="0.01"
+                                                        min="0"
+                                                        required
+                                                    />
+                                                    <label
+                                                        for="achat_fourniture_non_stockable"
+                                                        class="text-muted"
+                                                    >
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="row d-flex flex-column flex-sm-row"
+                                        >
+                                            <div class="col col-md-8 col-xxl-9">
+                                                <p>Autres achats consommés</p>
+                                            </div>
+
+                                            <div class="col col-md-4 col-xxl-3">
+                                                <div>
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="achat_autre_fourniture"
+                                                        placeholder=""
+                                                        title="Exemple : 9999.99"
+                                                        step="0.01"
+                                                        min="0"
+                                                        required
+                                                    />
+                                                    <label
+                                                        for="achat_autre_fourniture"
+                                                        class="text-muted"
+                                                    >
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingTwo"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo"
+                                    >
+                                        <span class="fw-bold">
+                                            Autres achats, location, entretien,
+                                            assurance</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the second item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-headingThree"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree"
+                                    >
+                                        <span class="fw-bold"
+                                            >Charges externes diverses</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapseThree"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the third item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading4"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse4"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse4"
+                                    >
+                                        <span class="fw-bold"
+                                            >Impôts et taxes</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse4"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading4"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 4th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading5"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse5"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse5"
+                                    >
+                                        <span class="fw-bold"
+                                            >Salaire et charges sociales</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse5"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading5"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 5th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading6"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse6"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse6"
+                                    >
+                                        <span class="fw-bold"
+                                            >Pertes sur créances
+                                            irrécouvrables</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse6"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading6"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 6th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading7"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse7"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse7"
+                                    >
+                                        <span class="fw-bold"
+                                            >Charges financières hors
+                                            renouvellement du matériel de
+                                            transport</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse7"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading7"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 7th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading8"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse8"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse8"
+                                    >
+                                        <span class="fw-bold">Amendes</span>
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse8"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading8"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 8th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2
+                                    class="accordion-header"
+                                    id="panelsStayOpen-heading9"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapse9"
+                                        aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapse9"
+                                    >
+                                        <span class="fw-bold"
+                                            >Dotations aux amortissements</span
+                                        >
+                                    </button>
+                                </h2>
+                                <div
+                                    id="panelsStayOpen-collapse9"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-heading9"
+                                >
+                                    <div class="accordion-body">
+                                        <strong
+                                            >This is the 9th item's accordion
+                                            body.</strong
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="confirmation_checkbox"
+                                required
+                            />
+                            <label
+                                class="form-check-label mb-3"
+                                for="confirmation_checkbox"
+                            >
+                                Confirmer la saisie
+                            </label>
+                        </div>
+                        <!-- Start : Form Buttons -->
+                        <div class="d-grid gap-4 col-10 col-md-6 mx-auto">
+                            <button
+                                class="btn btn-outline-success"
+                                type="submit"
+                            >
+                                Valider
+                            </button>
+                            <!-- Button trigger modal -->
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"
+                            >
+                                Annuler et quitter
+                            </button>
+
+                            <!-- Modal -->
+                            <div
+                                class="modal fade"
+                                id="staticBackdrop"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                tabindex="-1"
+                                aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true"
+                            >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5
+                                                class="modal-title"
+                                                id="staticBackdropLabel"
+                                            >
+                                                Avertissement
+                                            </h5>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Vous êtes sur le point de quitter la
+                                            page sans enregistrer votre saisie.
+                                            <br />
+                                            Etes-vous sûr ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Retourner au formulaire
+                                            </button>
+                                            <a
+                                                href="accueilControleur.html"
+                                                class="btn btn-outline-danger"
+                                            >
+                                                Quitter
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End : Form Buttons -->
+                    </form>
+                    <!-- End : Form-->
+                </div>
+            </div>
+        </div>
+        <!-- End : Main -->
+        <!-- Footer -->
+        <footer class="footer-dark mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#"
+                                >A propos de FénixTech</a
+                            >
+                        </h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3><a class="titleFooter" href="#">Contact</a></h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#">Mentions légales</a>
+                        </h3>
+                    </div>
+                    <div class="col item social">
+                        <a
+                            href="https://www.youtube.com/watch?v=n-xOQaVKFgo"
+                            target="_blank"
+                            ><i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="copyright">FénixTech © 2022</p>
+            </div>
+        </footer>
+        <!-- Footer -->
+        <!-- Start : Scripts -->
+        <script
+            src="https://kit.fontawesome.com/8b32e839a3.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <noscript
+            >Pour profitez de toutes les fonctionnalités de notre site, veuillez
+            activer Javascript dans les paramètres de votre
+            navigateur.</noscript
+        >
+        <!-- End : Scripts -->
+    </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Own CSS style -->
+        <link
+            href="./assets/styles/style.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Bootstrap CSS style -->
+        <link
+            href="../node_modules/bootstrap/dist/css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="#" type="image/png" />
+
+        <title>FenixTech BI- Données des années précédentes</title>
+    </head>
+    <body class="bg-light">
+        <!-- Start : Header -->
+        <header class="container-fluid sticky-top">
+            <div class="row">
+                <nav
+                    class="navbar navbar-expand-xl navbar-dark"
+                    aria-label="Barre de navigation"
+                >
+                    <div class="container-fluid px-0">
+                        <a
+                            class="navbar-brand align-self-start"
+                            href="index.html"
+                            ><img
+                                class="bg-light rounded-3"
+                                src="assets/images/logo_logiciel_150ppp.png"
+                                width="40"
+                                height="40"
+                                alt="logo - lien clickable"
+                            />
+                            <span class="ps-3">FENIXCost&Flux</span></a
+                        >
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarContent"
+                            aria-controls="navbarContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            class="collapse navbar-collapse"
+                            id="navbarContent"
+                        >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link"
+                                        aria-current="page"
+                                        href="accueilControleur.html"
+                                        >Accueil</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a class="nav-link disabled" href="cc6.html"
+                                        >Nouveau formulaire CC6</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link disabled"
+                                        href="formulaireSimulateur.html"
+                                        >Simulateur par camion</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link disabled"
+                                        href="SimulateurCoutDeRevient.html"
+                                        >Simulateur coût de revient actuel</a
+                                    >
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a
+                                        class="nav-link active disabled"
+                                        href="donneesAnneesPrecedentes.html"
+                                        >Données des années précédentes</a
+                                    >
+                                </li>
+                                <li class="nav-item ms-4">
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-outline-light bg-dark text-white dropdown-toggle"
+                                            type="button"
+                                            id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="18"
+                                                height="18"
+                                                fill="white"
+                                                class="bi bi-person-circle"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                                                />
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                                                />
+                                            </svg>
+                                            Mon espace
+                                        </button>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-dark bg-dark"
+                                            aria-labelledby="dropdownMenuButton2"
+                                        >
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon profil</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mes paramètres</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item disabled"
+                                                    href="#"
+                                                    >Mon historique</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="dropdown-item text-warning"
+                                                    href="index.html"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="18"
+                                                        height="18"
+                                                        fill="currentColor"
+                                                        class="bi bi-plugin"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"
+                                                        />
+                                                    </svg>
+                                                    Déconnexion</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End : Header -->
+        <!-- Start : Main -->
+        <div class="container-fluid mt-3 mt-lg-5">
+            <!-- Start Title-->
+            <div
+                class="row align-items-center justify-content-center mb-3 mb-lg-5"
+            >
+                <div class="col col-lg-6 justify-content-center">
+                    <h1 class="text-center">Données des années précédentes</h1>
+                </div>
+            </div>
+            <!-- End Title-->
+            <!--tableau p5-->
+            <div class="page-content page-container">
+                <div
+                    class="row d-flex justify-content-center"
+                    id="page-content"
+                >
+                    <div class="col-lg-8 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title fs-1">Archives</h4>
+                                <p class="card-description fs-6">Format pdf</p>
+                                <div class="table-responsive">
+                                    <table
+                                        class="table table-striped table-bordered table-hover table-sm"
+                                        aria-label="tableau des archives"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="table-primary text-center text-primary fs-5 align-middle"
+                                                >
+                                                    Années
+                                                </th>
+                                                <th
+                                                    class="table-primary text-center text-primary fs-5 align-middle"
+                                                >
+                                                    Liens de téléchargement
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    2017
+                                                </td>
+                                                <td class="text-center">
+                                                    <a
+                                                        href="#"
+                                                        class="btn btn-secondary btn-sm"
+                                                        >Télécharger</a
+                                                    >
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    2016
+                                                </td>
+                                                <td class="text-center">
+                                                    <a
+                                                        href="#"
+                                                        class="btn btn-secondary btn-sm"
+                                                        >Télécharger</a
+                                                    >
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    2015
+                                                </td>
+                                                <td class="text-center">
+                                                    <a
+                                                        href="#"
+                                                        class="btn btn-secondary btn-sm"
+                                                        >Télécharger</a
+                                                    >
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End : Main -->
+        <!-- Footer -->
+        <footer class="footer-dark mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#"
+                                >A propos de FénixTech</a
+                            >
+                        </h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3><a class="titleFooter" href="#">Contact</a></h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#">Mentions légales</a>
+                        </h3>
+                    </div>
+                    <div class="col item social">
+                        <a
+                            href="https://www.youtube.com/watch?v=n-xOQaVKFgo"
+                            target="_blank"
+                            ><i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="copyright">FénixTech © 2022</p>
+            </div>
+        </footer>
+        <!-- Footer -->
+        <!-- Start : Scripts -->
+        <script
+            src="https://kit.fontawesome.com/8b32e839a3.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <noscript
+            >Pour profitez de toutes les fonctionnalités de notre site, veuillez
+            activer Javascript dans les paramètres de votre
+            navigateur.</noscript
+        >
+        <!-- End : Scripts -->
+    </body>
+</html>

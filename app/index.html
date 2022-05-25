@@ -1,17 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="./assets/styles/style.css" rel="stylesheet">
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" >
-    <title>FenixTech BI- Page accueil - connexion</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Own CSS style -->
+        <link
+            href="./assets/styles/style.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="./assets/styles/connexion.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Bootstrap CSS style -->
+        <link
+            href="../node_modules/bootstrap/dist/css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="#" type="image/png" />
 
-<script src="script.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
+        <title>FenixTech BI- Accueil - connexion</title>
+    </head>
+    <body class="bg-light">
+        <!-- Start : Header -->
+        <header class="container-fluid sticky-top">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid px-0">
+                        <a
+                            class="navbar-brand align-self-start"
+                            href="index.html"
+                            ><img
+                                class="bg-light rounded-3"
+                                src="assets/images/logo_logiciel_150ppp.png"
+                                width="40"
+                                height="40"
+                                alt="logo - lien clickable"
+                            />
+                            <span class="ps-3">FENIXCost&Flux</span></a
+                        >
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End : Header -->
+        <!-- Start : Main -->
+        <div class="container login-form">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header text-center fs-3 fw-bolder">
+                            Se connecter
+                        </div>
+                        <div class="card-body">
+                            <!-- formulaire de connexion -->
+                            <form action="#" method="post" id="formConnection">
+                                <div class="form-group row mb-3">
+                                    <label
+                                        for="email_address"
+                                        class="col-md-4 col-form-label text-md-right"
+                                        >E-Mail
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input
+                                            type="text"
+                                            id="email_address"
+                                            class="form-control"
+                                            name="email-address"
+                                            required
+                                            autofocus
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-3">
+                                    <label
+                                        for="password"
+                                        class="col-md-4 col-form-label text-md-right"
+                                        >Mot de passe</label
+                                    >
+                                    <div class="col-md-6">
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            class="form-control"
+                                            name="password"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <div class="col-md-6 offset-md-4">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    name="remember"
+                                                />
+                                                Se souvenir du mot de passe
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 offset-md-4 text-center">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        Se connecter
+                                    </button>
+                                    <a href="#" class="btn btn-link">
+                                        Mot de passe oublié ?
+                                    </a>
+                                </div>
+                            </form>
+
+                            <!-- Fin de formulaire de connexion -->
+                        </div>
+                        <div class="card-footer" style="height: 41px">
+                            <div id="error" class="mb-0 pb-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End : Main -->
+        <!-- Footer -->
+        <footer class="footer-dark mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#"
+                                >A propos de FénixTech</a
+                            >
+                        </h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3><a class="titleFooter" href="#">Contact</a></h3>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>
+                            <a class="titleFooter" href="#">Mentions légales</a>
+                        </h3>
+                    </div>
+                    <div class="col item social">
+                        <a
+                            href="https://www.youtube.com/watch?v=n-xOQaVKFgo"
+                            target="_blank"
+                            ><i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="copyright">FénixTech © 2022</p>
+            </div>
+        </footer>
+        <!-- Footer -->
+        <!-- Start : Scripts-->
+        <script
+            src="https://kit.fontawesome.com/8b32e839a3.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="connexion.js"></script>
+        <script src="script.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <noscript
+            >Pour profitez de toutes les fonctionnalités de notre site, veuillez
+            activer Javascript dans les paramètres de votre
+            navigateur.</noscript
+        >
+        <!-- End : Scripts-->
+    </body>
 </html>

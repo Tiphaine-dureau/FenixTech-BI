@@ -1,40 +1,57 @@
 let currentDocId;
-/**
- * Méthode fetch pour appeler notre api qui appelle elle même la base de données => à garder en exemple
- */
-fetch(`${window.location.origin}/ping`, { method: 'GET' }).then((response) => {
-  return response.json().then(function (data) {
-    currentDocId = data._id;
-    document.getElementById('testDatabase').innerText = data["size"];
-  });
-})
 
-const updateButton = document.getElementById('updateButton')
-console.warn(updateButton);
-document.getElementById('updateButton').addEventListener('click', () => {
-  updateTest();
-})
+document.addEventListener("DOMContentLoaded", function () {
+  init();
+});
 
 /**
- * TODO
+ * Initialise les évènements du DOM et les premiers appels à l'API (get)
  */
-function updateTest() {
-  const distance = document.getElementById('distance').value;
-  const carburant = document.getElementById('carburant').value;
+function init() {
+  attachEventHandlers();
+  initFetching();
+}
+
+/**
+ * Au click gère l'ajout des valeurs et la propagation
+ */
+function attachEventHandlers() {
+  document.getElementById('updatePutBdd').addEventListener('click', (e) => {
+    onEditFormValidation();
+    e.preventDefault();
+  })
+  document.getElementById('updatePostBdd').addEventListener('click', (e) => {
+    onCreationFormValidation();
+    e.preventDefault();
+  })
+}
+
+/**
+ * Enregistre les données saisies dans un objet et envoie ces données pour modifier la bdd avec l'api fetch et la méthode PUT
+ */
+function onEditFormValidation() {
+  // TODO show spinner
+  const distance = getDistanceEl().value;
+  const carburant = getCarburantEl().value;
   const formData = {
     distance,
     carburant,
   };
-  fetch(`${window.location.href}simulator/${currentDocId}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  }).then((response) => {
-    return response.json().then(function (data) {
-      document.getElementById('testDatabase').innerText = data["size"];
-    });
-  })
+
+  putForm(formData);
 }
 
+/**
+ * Enregistre les données saisies dans un objet et envoie ces données pour créer un nouveau document dans la bdd avec l'api fetch et la méthode POST
+ */
+function onCreationFormValidation() {
+  // TODO show spinner
+  const numberTollgate = getNumberTollgate().value;
+  const totalPriceTollgate = getTotalPriceTollgate().value;
+  const formTwo = {
+    numberTollgate,
+    totalPriceTollgate,
+  };
+
+  postForm(formTwo);
+}

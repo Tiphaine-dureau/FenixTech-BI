@@ -6,21 +6,43 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./assets/styles/style.css" rel="stylesheet">
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" >
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <title>Page de Test liens avec la BDD</title>
 </head>
 <body>
 <h1>Test liaison BDD</h1>
-<button id="updateButton" type="button" class="btn btn-primary">Primary</button>
-<p>Donnée reçue de la base (requête get) : </p>
-<div id="testDatabase"></div>
-<p>Test pour modifier des données en bases (requête put) :</p>
-<input id="distance" type="text" />
-<label>Km parcouru</label>
-<input id="carburant" type="text"/>
-<label>Carburant consommé</label>
-<p>Test pour ajouter un élément dans la base de données (requête push)</p>
 
+<h5>Donnée reçue de la base (requête get) : </h5>
+<div class="bg-info col-1 " id="testDatabase"></div>
+
+<h5 class="pt-4">Test pour modifier des données en bases (requête put) :</h5>
+<form class="col-2 ms-4 border">
+    <div class="mb-3">
+        <label for="distance" class="form-label">Km parcouru</label>
+        <input id="distance" class="form-control" name="distance" type="text" />
+    </div>
+    <div class="mb-3">
+        <label for="carburant" class="form-label">Carburant consommé</label>
+        <input id="carburant" class="form-control" name="carburant" type="text" />
+    </div>
+    <button type="button" class="btn btn-primary" id="updatePutBdd">Submit</button>
+</form>
+
+<h5 class="pt-4">Test pour ajouter un élément dans la base de données (requête post)</h5>
+<form class="col-2 ms-4 border">
+    <div class="mb-3">
+        <label for="nbPeage" class="form-label">Nombre de péages</label>
+        <input id="nbPeage" class="form-control" name="nbPeage" type="text" />
+    </div>
+    <div class="mb-3">
+        <label for="prixTotalPeage" class="form-label">Prix total des péages</label>
+        <input id="prixTotalPeage" class="form-control" name="prixTotalPeage" type="text" />
+        <button type="submit" class="btn btn-primary" id="updatePostBdd">Submit</button>
+    </div>
+</form>
+
+<script src="util.js"></script>
+<script src="api.js"></script>
 <script src="exemple.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
