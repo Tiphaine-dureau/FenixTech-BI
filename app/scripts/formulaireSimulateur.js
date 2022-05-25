@@ -8,7 +8,5 @@ const form = document.getElementById('formVehicule');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    window.location.href =
-        'https://fenixtech-bi.herokuapp.com/SimulateurCoutDeRevient.html';
-    console.log('Changement de page');
+    window.location.href = `${window.location.origin}/SimulateurCoutDeRevient.html`;
 });
