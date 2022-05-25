@@ -79,12 +79,16 @@
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled" href="#"
+                                    <a
+                                        class="nav-link disabled"
+                                        href="simulateurCoutDeRevient.html"
                                         >Coût de revient actuel</a
                                     >
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link disabled" href="#"
+                                    <a
+                                        class="nav-link disabled"
+                                        href="donneesAnneesPrecedentes.html"
                                         >Données des années précédentes</a
                                     >
                                 </li>
@@ -210,7 +214,7 @@
             <!-- Start : Form-->
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 col-md-10 col-lg-6">
-                    <form action="#" method="#">
+                    <form action="#" method="post" id="formVehicule">
                         <div
                             class="accordion mb-3"
                             id="accordionPanelsStayOpenExample"
@@ -525,7 +529,7 @@
                                     class="accordion-collapse collapse"
                                     aria-labelledby="panelsStayOpen-headingThree"
                                 >
-                                    <div class="accordion-body">
+                                    <div class="accordion-body px-0">
                                         <div
                                             class="accordion accordion-flush"
                                             id="accordionFlushExample"
@@ -561,8 +565,12 @@
                                                                 class="form-control"
                                                                 id="conso_gazoil_pour_100_km"
                                                                 placeholder="20.00"
+                                                                title="20.00"
                                                                 step="0.01"
                                                                 min="0"
+                                                                style="
+                                                                    height: 100px;
+                                                                "
                                                             />
                                                             <label
                                                                 for="conso_gazoil_pour_100_km"
@@ -581,12 +589,16 @@
                                                                 class="form-control"
                                                                 id="prix_gasoil_route"
                                                                 placeholder="1.2345"
+                                                                title="1.2345"
                                                                 step="0.0001"
                                                                 min="0"
+                                                                style="
+                                                                    height: 100px;
+                                                                "
                                                             />
                                                             <label
                                                                 for="prix_gasoil_route"
-                                                                class="text-muted"
+                                                                class="text-muted fs-6"
                                                                 >Prix moyen du
                                                                 litre de Gazole
                                                                 route (hors
@@ -606,6 +618,9 @@
                                                                 placeholder="19.99"
                                                                 step="0.01"
                                                                 min="0"
+                                                                style="
+                                                                    height: 100px;
+                                                                "
                                                             />
                                                             <label
                                                                 for="floatingInput"
@@ -626,6 +641,9 @@
                                                                 placeholder="1.2345"
                                                                 step="0.0001"
                                                                 min="0"
+                                                                style="
+                                                                    height: 100px;
+                                                                "
                                                             />
                                                             <label
                                                                 for="prix_moyen_gasoil_citerne"
@@ -991,6 +1009,7 @@
             src="https://kit.fontawesome.com/8b32e839a3.js"
             crossorigin="anonymous"
         ></script>
+        <script src="formulaireSimulateur.js"></script>
         <script src="script.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
