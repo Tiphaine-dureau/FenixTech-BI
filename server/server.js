@@ -64,3 +64,20 @@ server.put('/cc6Form/:id', function (req, res) {
     res.send();
   })
 })
+
+/**
+ * Pour ajouter des données dans la base de donnée
+ */
+server.post('/vForm', function (req, res) {
+  console.info("called v form endpoint and add new vehicule");
+  const collection = mongoClient.db('FenixTechDatabase').collection('FormV');
+  collection.insertOne({ ...req.body }).then((doc) => {
+    collection.find({ _id: ObjectId(doc.insertedId) }).toArray(function (err, results) {
+      res.statusCode = 200;
+      res.send(results[0]);
+    })
+  }).catch(() => {
+    res.statusCode = 500;
+    res.send();
+  })
+})
