@@ -2,10 +2,10 @@
 
 /* Identifiants et mots de passe pour la simulation */
 
-const emailForControler = `controleur@example.com`;
-const passwordForControler = `controleur`;
-const emailForCommercial = `commercial@example.com`;
-const passwordForCommercial = `commercial`;
+const emailForControler = 'controleur@example.com';
+const passwordForControler = 'controleur';
+const emailForCommercial = 'commercial@example.com';
+const passwordForCommercial = 'commercial';
 
 /* Variables liées au formulaire de connexion */
 
@@ -43,17 +43,14 @@ const connectUser = () => {
         email.value === emailForControler &&
         password.value === passwordForControler
     ) {
-        window.location.href =
-            'https://fenixtech-bi.herokuapp.com/accueilControleur.html';
+        window.location.href = `${window.location.origin}/accueilControleur.html`;
     } else if (
-        email.value == emailForCommercial &&
+        email.value === emailForCommercial &&
         password.value === passwordForCommercial
     ) {
-        window.location.href =
-            'https://fenixtech-bi.herokuapp.com/accueilCommercial.html';
+        window.location.href = `${window.location.origin}/accueilCommercial.html`;
     } else {
-        event.preventDefault();
-        error.innerText = `Votre email et/ou votre mot de passe sont incorrects.`;
+        error.innerText = 'Votre email et/ou votre mot de passe sont incorrects.';
         resetInput();
     }
 };
@@ -61,12 +58,11 @@ const connectUser = () => {
 /* Ecoute de la soumission du formulaire et appel des fonctions */
 
 form.addEventListener('submit', (event) => {
+    event.preventDefault();
     if (error.innerText !== '') {
-        event.preventDefault();
         alert("Le formulaire contient des erreurs et n'a pas été envoyé");
         resetInput();
     } else {
-        event.preventDefault();
         connectUser();
     }
 });
