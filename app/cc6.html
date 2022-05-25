@@ -177,13 +177,13 @@
         </header>
         <!-- End : Header -->
         <!-- Start : Main -->
-        <div class="container-fluid mt-3 mt-lg-5">
+        <div id="mainContainer" style="display: none" class="container-fluid mt-3 mt-lg-5">
             <!-- Start Title-->
             <div
                 class="row align-items-center justify-content-center mb-3 mb-lg-5"
             >
                 <div class="col col-lg-6 justify-content-center">
-                    <h1 class="text-center">Nouveau formulaire CC6</h1>
+                    <h1 class="text-center">Formulaire CC6 (année en cours)</h1>
                 </div>
             </div>
             <!-- End Title-->
@@ -257,9 +257,9 @@
                                             <div class="col col-md-4 col-xxl-3">
                                                 <div class="form-floating mb-4">
                                                     <input
+                                                        id="601"
                                                         type="number"
                                                         class="form-control"
-                                                        id="achat_entretien"
                                                         placeholder=""
                                                         title="Exemple : 1234.56"
                                                         step="0.01"
@@ -267,7 +267,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="achat_entretien"
+                                                        for="601"
                                                         class="text-muted"
                                                         >Ex: 1234.56
                                                     </label>
@@ -289,9 +289,9 @@
                                             <div class="col col-md-4 col-xxl-3">
                                                 <div class="mb-3">
                                                     <input
+                                                        id="602"
                                                         type="number"
                                                         class="form-control"
-                                                        id="achat_atelier"
                                                         placeholder=""
                                                         title="Exemple : 9999.99"
                                                         step="0.01"
@@ -299,7 +299,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="achat_atelier"
+                                                        for="602"
                                                         class="text-muted"
                                                     >
                                                     </label>
@@ -319,9 +319,9 @@
                                             <div class="col col-md-4 col-xxl-3">
                                                 <div class="mb-3">
                                                     <input
+                                                        id="603"
                                                         type="number"
                                                         class="form-control"
-                                                        id="achat_adminFourniture"
                                                         placeholder=""
                                                         title="Exemple : 9999.99"
                                                         step="0.01"
@@ -329,7 +329,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="achat_adminFourniture"
+                                                        for="603"
                                                         class="text-muted"
                                                     >
                                                     </label>
@@ -349,9 +349,9 @@
                                             <div class="col col-md-4 col-xxl-3">
                                                 <div class="mb-3">
                                                     <input
+                                                        id="604"
                                                         type="number"
                                                         class="form-control"
-                                                        id="achat_fourniture_non_stockable"
                                                         placeholder=""
                                                         title="Exemple : 9999.99"
                                                         step="0.01"
@@ -359,7 +359,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="achat_fourniture_non_stockable"
+                                                        for="604"
                                                         class="text-muted"
                                                     >
                                                     </label>
@@ -376,9 +376,9 @@
                                             <div class="col col-md-4 col-xxl-3">
                                                 <div>
                                                     <input
+                                                        id="605"
                                                         type="number"
                                                         class="form-control"
-                                                        id="achat_autre_fourniture"
                                                         placeholder=""
                                                         title="Exemple : 9999.99"
                                                         step="0.01"
@@ -386,7 +386,7 @@
                                                         required
                                                     />
                                                     <label
-                                                        for="achat_autre_fourniture"
+                                                        for="605"
                                                         class="text-muted"
                                                     >
                                                     </label>
@@ -665,6 +665,7 @@
                         <!-- Start : Form Buttons -->
                         <div class="d-grid gap-4 col-10 col-md-6 mx-auto">
                             <button
+                                    id="submitCC6"
                                 class="btn btn-outline-success"
                                 type="submit"
                             >
@@ -737,6 +738,12 @@
                 </div>
             </div>
         </div>
+        <div class="text-center" id="spinnerContainer">
+            <div>Chargement en cours</div>
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
         <!-- End : Main -->
         <!-- Footer -->
         <footer class="footer-dark mt-5">
@@ -775,6 +782,8 @@
             crossorigin="anonymous"
         ></script>
         <script src="script.js"></script>
+        <script src="./scripts/api.js"></script>
+        <script src="./scripts/cc6.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
         <noscript
             >Pour profitez de toutes les fonctionnalités de notre site, veuillez
