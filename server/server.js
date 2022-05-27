@@ -1,8 +1,5 @@
-/**
- * Initialiser nodejs avec express et mongodb
- * Doc : https://expressjs.com/fr/starter/hello-world.html
- * @type {e | (() => Express)}
- */
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const server = express();
@@ -26,7 +23,9 @@ server.listen(port, () => {
 })
 
 // URI (Uniform Resource Identifier)
-const uri = "mongodb+srv://Tiphaine:admin@cluster0.tyr5k.mongodb.net/FenixTechDatabase?retryWrites=true&w=majority";
+const dbHost = process.env.DB_HOST;
+const dbPwd = process.env.DB_PWD;
+const uri = `mongodb+srv://${dbHost}:${dbPwd}@cluster0.tyr5k.mongodb.net/FenixTechDatabase?retryWrites=true&w=majority`;
 const mongoClient = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -36,6 +35,8 @@ const mongoClient = new MongoClient(uri, {
 //Indique dans la console si je suis bien connectée à mongodb
 mongoClient.connect(() => {
   console.info("logged to database");
+}, () => {
+  console.info("error while logging to database");
 });
 
 server.get('/cc6Form', function (req, res) {
