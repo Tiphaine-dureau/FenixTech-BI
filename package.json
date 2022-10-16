@@ -2,9 +2,9 @@
   "name": "fenixtech-bi",
   "version": "1.0.0",
   "description": "Hackathon FenixTech BI",
-  "main": "server/server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
