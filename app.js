@@ -10,7 +10,7 @@ server.use(express.json());
 //Permet à express d'utiliser les fichiers statiques (css / js) dans app
 server.use(express.static("app"));
 //Chemin absolu à partir duquel se lance le processus node
-server.use("/node_modules", express.static(__dirname + "/../node_modules"));
+server.use("/node_modules", express.static(__dirname + "/node_modules"));
 
 //Quand reçoit une requête sur l'url d'origine ça envoie le fichier index.html
 server.get('/', (req, res) => {

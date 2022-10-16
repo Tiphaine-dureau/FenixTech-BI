@@ -2,8 +2,8 @@
 
 /* Identifiants et mots de passe pour la simulation */
 
-const emailForControler = 'controleur@example.com';
-const passwordForControler = 'controleur';
+const emailForController = 'controleur@example.com';
+const passwordForController = 'controleur';
 const emailForCommercial = 'commercial@example.com';
 const passwordForCommercial = 'commercial';
 
@@ -12,6 +12,8 @@ const passwordForCommercial = 'commercial';
 const form = document.getElementById('formConnection');
 const email = document.getElementById('email_address');
 const password = document.getElementById('password');
+const loginAsController = document.getElementById('login-as-controller');
+const loginAsCommercial = document.getElementById('login-as-commercial');
 
 const error = document.getElementById('error');
 error.style.color = 'red';
@@ -40,8 +42,8 @@ const resetInput = () => {
 
 const connectUser = () => {
     if (
-        email.value === emailForControler &&
-        password.value === passwordForControler
+        email.value === emailForController &&
+        password.value === passwordForController
     ) {
         window.location.href = `${window.location.origin}/accueilControleur.html`;
     } else if (
@@ -58,6 +60,7 @@ const connectUser = () => {
 /* Ecoute de la soumission du formulaire et appel des fonctions */
 
 form.addEventListener('submit', (event) => {
+    console.warn("submit");
     event.preventDefault();
     if (error.innerText !== '') {
         alert("Le formulaire contient des erreurs et n'a pas été envoyé");
@@ -65,4 +68,18 @@ form.addEventListener('submit', (event) => {
     } else {
         connectUser();
     }
+});
+
+loginAsController.addEventListener('click', () => {
+    const emailInput = document.getElementById('email_address');
+    const passwordInput = document.getElementById('password');
+    emailInput.value = emailForController;
+    passwordInput.value = passwordForController;
+});
+
+loginAsCommercial.addEventListener('click', () => {
+    const emailInput = document.getElementById('email_address');
+    const passwordInput = document.getElementById('password');
+    emailInput.value = emailForCommercial;
+    passwordInput.value = passwordForCommercial;
 });
